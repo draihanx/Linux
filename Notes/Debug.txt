@@ -1,0 +1,22 @@
+#Ibus not working on every app
+Soln:
+Add line to /etc/profile file;
+    export GTK_IM_MODULE=ibus
+    export XMODIFIERS=@im=ibus
+    export QT_IM_MODULE=ibus
+then command: ibus-daemon -drx
+
+
+#Virtualbox problem
+pacman -S virtualbox
+    select virtualbox-host-dkms (not virtualbox-host-modules-arch)
+sudo modprobe vboxdrv
+
+
+#Touchpad not working
+    `xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`
+
+
+#Error while booting "error: file /boot/grub/grub.gmo not found"
+    add "LANG=C" to /etc/default/grub file
+    then 'grub-mkconfig -o /boot/grub/grub.cfg'

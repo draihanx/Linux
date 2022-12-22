@@ -1,0 +1,18 @@
+#Location: $HOME/.config/sxhkd/sxhkdrc
+#Open Application
+super + o;{w,g,k,f,m,r}
+	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && lxterminal -e mocp; else lxterminal -e mocp;fi,lxterminal -e ranger}
+super {_,shift +,alt + } Pause
+	pactl set-sink-volume 0 {+,-,_}5%
+super + alt + {F7,F8,Home,End}
+	{xrandr --output LVDS-1 --auto, xrandr --output LVDS-1 --off, systemctl reboot, systemctl poweroff}
+@super + t
+	xfce4-terminal
+control + alt + t
+	lxterminal
+super + slash
+	rofi -show run
+Print {_, + shift,+ alt}
+	gnome-screenshot {_,-a,-c}
+super + alt + KP_Multiply
+	lxterminal -e "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | less"

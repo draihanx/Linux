@@ -1,0 +1,48 @@
+dir(list) #Prints all the attributes for list
+dir(str) #Prints all the attributes for str, upper is an attribute for str
+help(str.upper) #Prints information about what str.upper option does. 
+"Hello".upper() #HELLO
+type(x) #Prints data type of x
+print(__builtins__) #Prints all the functions of python
+
+dictionary = {"key": value}
+help(dict) #Dictionary 
+print(dict.values()) #Prints values of a dictionary like a list.
+print(dict.keys()) #Prints keys of dict.
+
+
+tuple = {a,b,c} #like list but cannot be changed (like tuple.append())
+
+word = "hello"
+print(word[2]) #Output > l
+list = [ "hello", 3, 2, 1]
+print(list[0][2]) #Output > l
+
+var = "Raihan"
+print(f"Hello {var}") #prints Hello Raihan
+
+
+#File
+myfile = open("file.txt") #Should already exist file.txt file or mode should be "w" like opent("file.txt","w")
+print(myfile.read()) #Prints the file content
+#one thing, before read() function execution, cursor will be in the first place.
+#After executin read(), cursor will go to the last of the file.
+#Executing read() two times will print the file content once becase cursor at the last position. 
+#One should close file after processing, as file takes some ram.
+myfile.close()
+
+with open("file.txt") as myfile:
+  content = myfile.read()
+print(content) 
+
+content=open("file.txt","w") # to write file
+content.write("Something")
+
+#w mode override content if file exist. x mode will not override. 
+#a mode will append file content if file exist. 
+content.seek(0) #Cursor moves to 0 position . 
+
+
+var="hello world"
+"hello" in var #Returns true
+"universe" in var #Returns False
