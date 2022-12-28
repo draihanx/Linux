@@ -20,3 +20,7 @@ sudo modprobe vboxdrv
 #Error while booting "error: file /boot/grub/grub.gmo not found"
     add "LANG=C" to /etc/default/grub file
     then 'grub-mkconfig -o /boot/grub/grub.cfg'
+
+#Pop shell in Arch
+yay -S gnome-shell-extension-pop-shell-git
+>>> Rust
