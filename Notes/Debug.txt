@@ -24,3 +24,7 @@ sudo modprobe vboxdrv
 #Pop shell in Arch
 yay -S gnome-shell-extension-pop-shell-git
 >>> Rust
+
+#No sound in newly installed arch
+pacman -S alsa-utils
+amixer sset Master unmute
