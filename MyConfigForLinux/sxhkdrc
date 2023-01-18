@@ -1,0 +1,52 @@
+#~/.config/sxhkd/sxhkdrc
+#Location: $HOME/.config/sxhkd/sxhkdrc
+#Open Application
+super + o;{w,g,k,f,m,r}
+	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && lxterminal -e mocp; else lxterminal -e mocp;fi,lxterminal -e ranger}
+super {_,shift +,alt + } Pause
+	pactl set-sink-volume 0 {+,-,_}5%
+super + alt + {F7,F8,Home,End,Delete,Insert}
+	{xrandr --output LVDS-1 --auto, xrandr --output LVDS-1 --off, systemctl reboot, systemctl poweroff, betterlockscreen -l dimblur, bspc quit}
+@super + t
+	xfce4-terminal
+control + alt + t
+	lxterminal
+super + slash
+	rofi -show run
+Print {_, + shift,+ alt}
+	gnome-screenshot {_,-a,-c}
+super + alt + KP_Multiply
+	lxterminal -e "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | less"
+#Focusing and stacking
+super + {_,alt + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+#Minimize
+#Resizing
+super + shift + {h,j,k,l}
+	n=10; \
+	{d1=left;	d2=right;	dx=-$n;	    dy=0; \
+	, d1=bottom;	d2=top;		dx=0;	dy=$n; \
+	, d1=top;	d2=bottom;	dx=0;	dy=-$n; \
+	, d1=right; d2=left;		dx=$n;	dy=0; \
+	} \
+	bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+alt + F4
+	bspc node -c
+#Moving window
+super + shift + {Left, Down, Up, Right}
+	bspc node -v {-20 0, 0 20, 0 -20, 20 0}
+#Changing mode
+super + control + {h,j,l,k}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + shift + {1-9}
+	bspc node --to-desktop ^{1-9} --focus
+super + {1-9}
+	bspc desktop --focus ^{1-9}
+super + Tab
+	bspc node -f next
+super + Tab + shift
+	bspc node -f prev
+super + Left
+	bspc desktop -f prev
+super + Right
+	bspc desktop -f next
