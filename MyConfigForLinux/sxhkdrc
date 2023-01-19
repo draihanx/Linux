@@ -2,7 +2,7 @@
 #Location: $HOME/.config/sxhkd/sxhkdrc
 #Open Application
 super + o;{w,g,k,f,m,r}
-	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && lxterminal -e mocp; else lxterminal -e mocp;fi,lxterminal -e ranger}
+	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && xfce4-terminal -e mocp; else xfce4-terminal -e mocp;fi,xfce4-terminal -e ranger}
 #Handy shortcuts
 super {_,shift +,alt + } Pause
 	pactl set-sink-volume 0 {+,-,_}5%
@@ -12,7 +12,7 @@ super + alt + {F7,F8,Home,End,Delete,Insert}
 @super + t
 	xfce4-terminal
 control + alt + t
-	lxterminal
+	xfce4-terminal
 super + slash
 	rofi -show run
 Print {_, + shift,+ alt}
