@@ -3,10 +3,12 @@
 #Open Application
 super + o;{w,g,k,f,m,r}
 	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && lxterminal -e mocp; else lxterminal -e mocp;fi,lxterminal -e ranger}
+#Handy shortcuts
 super {_,shift +,alt + } Pause
 	pactl set-sink-volume 0 {+,-,_}5%
 super + alt + {F7,F8,Home,End,Delete,Insert}
 	{xrandr --output LVDS-1 --auto, xrandr --output LVDS-1 --off, systemctl reboot, systemctl poweroff, betterlockscreen -l dimblur, bspc quit}
+#@ is for release event
 @super + t
 	xfce4-terminal
 control + alt + t
@@ -20,7 +22,6 @@ super + alt + KP_Multiply
 #Focusing and stacking
 super + {_,alt + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
-#Minimize
 #Resizing
 super + shift + {h,j,k,l}
 	n=10; \
@@ -38,14 +39,21 @@ super + shift + {Left, Down, Up, Right}
 #Changing mode
 super + control + {h,j,l,k}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-super + shift + {1-9}
+#Move window to a desktop
+super + control + {1-9}
 	bspc node --to-desktop ^{1-9} --focus
+#Move window to the next/prev desktop
+super + control + {Left, Right}
+	bspc node --to-desktop {prev, next} --focus
+#Go to nth desktop
 super + {1-9}
 	bspc desktop --focus ^{1-9}
+#Navigate window
 super + Tab
 	bspc node -f next
 super + Tab + shift
 	bspc node -f prev
+#Go to next/prev desktop
 super + Left
 	bspc desktop -f prev
 super + Right
