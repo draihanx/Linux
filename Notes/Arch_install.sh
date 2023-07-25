@@ -44,7 +44,7 @@ passwd username
 chfn -f "Full name" username
 vim /etc/sudoers
 su "username"
-pacman -S xorg lxsession "gdm or ly-git via yay" rofi xfce4 xfce4-goodies pulseaudio pavucontrol xdg-user-dirs xdg-utils sxhkd bspwm polybar sxhkd firefox gimp openshot nitrogen ibus ibus-m17n m17n-db ranger pcmanfm git moc xterm xfce4-terminal
+pacman -S xorg lxsession "gdm or ly-git via yay" rofi xfce4 xfce4-goodies pulseaudio pavucontrol xdg-user-dirs xdg-utils sxhkd bspwm polybar sxhkd firefox gimp openshot nitrogen ibus ibus-m17n m17n-db ranger pcmanfm git moc xterm xfce4-terminal picom
 systemctl enable ly
 timedatectl set-ntp true
 timedatectl set-timezone Asia/Dhaka
