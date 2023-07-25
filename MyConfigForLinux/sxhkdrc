@@ -1,6 +1,10 @@
 #~/.config/sxhkd/sxhkdrc
 #Location: $HOME/.config/sxhkd/sxhkdrc
 #Open Application
+
+super + control + d
+	bcps monitor -d R A I H A N . . .
+
 super + o;{w,g,k,f,m,r}
 	{firefox,gimp,kdenlive,pcmanfm,if [ -f /home/raihan/.moc/pid ]; then rm /home/raihan/.moc/pid && xfce4-terminal -e mocp; else xfce4-terminal -e mocp;fi,xfce4-terminal -e ranger}
 #Handy shortcuts
