@@ -1,0 +1,2 @@
+yay -Sy inxi #It show info about CPU, Disk, Memory, All
+yay -Sy lshw #Almost similar
