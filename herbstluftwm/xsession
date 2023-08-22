@@ -4,5 +4,5 @@ sxhkd &
 nitrogen --restore &
 polybar &
 lxsession &
-picom &
+compton &
 xsetroot -cursor_name left_ptr &
