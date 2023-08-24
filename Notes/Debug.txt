@@ -28,3 +28,59 @@ yay -S gnome-shell-extension-pop-shell-git
 #No sound in newly installed arch
 pacman -S alsa-utils
 amixer sset Master unmute
+
+
+
+
+#Disbling keyboard:
+
+To disable laptop built in keyboard in Ubuntu, first you need to identify the device id for keyboard.
+
+Now run xinput –list command to get list of all input devices
+
+$ xinput --list
+⎡ Virtual core pointer                      id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad                id=11   [slave  pointer  (2)]
+⎣ Virtual core keyboard                     id=3    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard               id=5    [slave  keyboard (3)]
+    ↳ Power Button                              id=6    [slave  keyboard (3)]
+    ↳ Video Bus                                 id=7    [slave  keyboard (3)]
+    ↳ Power Button                              id=8    [slave  keyboard (3)]
+    ↳ HP Truevision HD                          id=9    [slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard              id=10   [slave  keyboard (3)]
+    ↳ HP WMI hotkeys                            id=12   [slave  keyboard (3)]
+    ↳ HP Wireless hotkeys                       id=13   [slave  keyboard (3)]
+
+$ 
+
+xinput command should be run as user that run the GUI (logged in user).
+
+The one above list what we need is
+
+↳ AT Translated Set 2 keyboard              id=10   [slave  keyboard (3)]
+The ID is 10.
+
+To disable the keyboard, run
+
+xinput set-int-prop 10 "Device Enabled" 8 0  #here, 8 is the bit
+
+To enable it, run
+
+xinput set-int-prop 10 "Device Enabled" 8 1
+
+Method 2: Disabling on Boot
+
+Edit file /etc/default/grub
+
+vi /etc/default/grub
+
+Find
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+Replace it with
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i8042.nokbd"
+Regenerate grub.cfg with
+
+grub-mkconfig -o /boot/grub/grub.cfg
+Reboot Laptop, Built in keyboard will be disabled by default. No need to run xinput command and manually disable each time.
