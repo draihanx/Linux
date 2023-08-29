@@ -84,3 +84,11 @@ Regenerate grub.cfg with
 
 grub-mkconfig -o /boot/grub/grub.cfg
 Reboot Laptop, Built in keyboard will be disabled by default. No need to run xinput command and manually disable each time.
+
+
+
+
+#domain to ip
+edit file /etc/hosts
+127.0.0.0     example.com example2.com
+
