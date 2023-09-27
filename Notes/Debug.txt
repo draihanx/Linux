@@ -92,3 +92,10 @@ Reboot Laptop, Built in keyboard will be disabled by default. No need to run xin
 edit file /etc/hosts
 127.0.0.0     example.com example2.com
 
+#Bluetooth not working
+systemctl enable bluetooth
+systemctl start bluetooth #To start immediately
+#if the also not solved, 
+sudo rfkill
+sudo lspci | grep blue
+sudo bluetoothctl
