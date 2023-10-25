@@ -1,0 +1,8 @@
+ibus-daemon &
+sxhkd &
+`xinput set-prop "FTCS1000:01 2808:0101 Touchpad" "libinput Tapping Enabled" 1` &
+nitrogen --restore &
+polybar &
+lxsession &
+#compton &
+xsetroot -cursor_name left_ptr &
