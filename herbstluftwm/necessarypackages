@@ -1,0 +1,5 @@
+sudo pacman -Sy xdotool pcmanfm brightnessctl eog
+xfce4-terminal lxappearance gnome-screenshot lxterminal
+
+
+yay -Sy ttf-herd-fonts-symbols
