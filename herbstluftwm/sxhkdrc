@@ -22,8 +22,8 @@ control + alt + t
 	xfce4-terminal
 super + slash
 	rofi -show run
-Print {_, + shift,+ alt}
-	gnome-screenshot {_,-w,-c}
+Print {_, + shift}
+	xfce4-screenshooter {-f,-r}s ~/Pictures/"$(date +%s%N)".png
 super + alt + KP_Multiply
 	lxterminal -e "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | less"
 #
