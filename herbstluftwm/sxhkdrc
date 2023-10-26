@@ -8,7 +8,13 @@ super + o;{w,g,k,f,m,r}
 super {_,shift +,alt + } Pause
 	pactl set-sink-volume 0 {+,-,_}5%
 super + alt + {F7,F8,Home,End,Delete}
-	{xrandr --output LVDS-1 --auto, xrandr --output LVDS-1 --off, systemctl reboot, systemctl poweroff, betterlockscreen -l dimblur}
+	{xrandr --output eDP-1 --auto, xrandr --output eDP-1 --off, systemctl reboot, systemctl poweroff, betterlockscreen -l dimblur}
+
+b {+F8, +F9}
+	brightnessctl set 5%{+,-}
+
+XF86MonBrightness{Up,Down}
+	brightnessctl set 5%{+,-}
 #@ is for release event
 @super + t
 	xfce4-terminal
@@ -17,7 +23,7 @@ control + alt + t
 super + slash
 	rofi -show run
 Print {_, + shift,+ alt}
-	gnome-screenshot {_,-a,-c}
+	gnome-screenshot {_,-w,-c}
 super + alt + KP_Multiply
 	lxterminal -e "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | less"
 #
