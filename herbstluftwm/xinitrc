@@ -56,5 +56,5 @@ lxsession &
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &
 polybar &
-nitrogen --restore &
+nitrogen --set-auto /usr/share/backgrounds/wall.jpg &
 exec herbstluftwm
