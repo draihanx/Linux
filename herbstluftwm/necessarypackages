@@ -1,4 +1,4 @@
-sudo pacman -Sy xorg-xinit xdotool pcmanfm brightnessctl eog
+sudo pacman -Sy xorg-xinit feh xdotool pcmanfm brightnessctl eog
 xfce4-terminal lxappearance xcfe4-screenshooter lxterminal
 
 
