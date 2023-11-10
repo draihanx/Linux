@@ -8,8 +8,13 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#334455'
-
+#xsetroot -solid '#334455'
+feh --bg-scale /usr/share/backgrounds/wall.jpg &
+sxhkd &
+ibus-daemon &
+`xinput set-prop "FTCS1000:01 2808:0101 Touchpad" "libinput Tapping Enabled" 1` &
+lxsession &
+polybar &
 # remove all existing keybindings
 hc keyunbind --all
 
