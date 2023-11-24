@@ -3,3 +3,5 @@ xfce4-terminal lxappearance xcfe4-screenshooter lxterminal
 
 
 yay -Sy ttf-herd-fonts-symbols
+
+sudo pacman -Sy aria2 yt-dlp 
