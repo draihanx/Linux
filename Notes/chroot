@@ -1,0 +1,7 @@
+mkdir raihan
+mount /dev/sdX2 /raihan
+mount /dev/sdX1 /raihan/boot
+mount -t proc proc /raihan/proc
+mount -t sysfs sys /raihan/sys
+mount -o bind /dev /raihan/dev
+mount -t devpts pts /raihan/dev/pts
