@@ -1,0 +1,20 @@
+ttf-font-awesome
+brightnessctl
+hyprshot, grim
+wf-recorder
+pavucontrol
+pulseaudio
+localsend-bin
+acpi
+xdg-desktop-portal-td #Not sure
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+fcitx5
+fcitx5-configtool
+fcitx5-qt
+fcitx5-gtk
+fcitx5-m17n
+m17n-db
+
+
