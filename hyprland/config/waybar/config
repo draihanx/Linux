@@ -17,7 +17,7 @@
 	"interval": 1,
 	"format": "{: %I:%M:%S %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%A %d %B, %Y}",
+        "format-alt": "{:%A, %d %B, %Y}",
 	"Max-length": 20
     },
     "cpu": {
@@ -102,7 +102,7 @@
 	"format-icons": {
 		"default": "",
 		"active": "",
-		"urgent": ""
+		"urgent": "",
 	}
     }
 }

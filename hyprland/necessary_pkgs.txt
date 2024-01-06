@@ -16,5 +16,5 @@ fcitx5-qt
 fcitx5-gtk
 fcitx5-m17n
 m17n-db
-
-
+okular #pdf
+nomacs #image viewer from aur
