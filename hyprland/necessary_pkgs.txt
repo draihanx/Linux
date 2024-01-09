@@ -18,3 +18,8 @@ fcitx5-m17n
 m17n-db
 okular #pdf
 nomacs #image viewer from aur
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
+wireplumber
