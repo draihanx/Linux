@@ -43,7 +43,7 @@ passwd username
 chfn -f "Full name" username
 vim /etc/sudoers
 su "username"
-pacman -S rofi hyprland hyprpaper qt5-wayland qt6-wayland chromium pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-utils waybar firefox gimp openshot fcitx5 fcitx5-m17n m17n-db fcitx5-configtool fcitx5-qt fcitx5-gtk okular nomacs ranger pcmanfm git moc ttf-font-awesome brightnessctl hyprshot grim wf-recorder localsend-bin acpi kitty
+pacman -S rofi hyprland hyprpaper qt5-wayland qt6-wayland chromium pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-utils waybar firefox gimp openshot fcitx5 fcitx5-m17n m17n-db fcitx5-configtool fcitx-config-qt fcitx5-qt fcitx5-gtk okular nomacs(aur) ranger pcmanfm git moc ttf-font-awesome brightnessctl hyprshot(aur) grim wf-recorder localsend-bin acpi kitty
 timedatectl set-ntp true
 timedatectl set-timezone Asia/Dhaka
 #run "Hyprland" in tty to start hyprland session
