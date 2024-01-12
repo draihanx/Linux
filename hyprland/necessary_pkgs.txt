@@ -12,6 +12,7 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 fcitx5
 fcitx5-configtool
+fcitx5-config-qt
 fcitx5-qt
 fcitx5-gtk
 fcitx5-m17n
