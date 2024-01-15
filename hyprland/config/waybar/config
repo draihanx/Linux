@@ -6,7 +6,7 @@
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-center": ["hyprland/workspaces"],
-    "modules-left": ["hyprland/window"],
+    "modules-left": ["custom/menu","custom/firefox","custom/file","custom/terminal","hyprland/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "tray"],
     "tray": {
         // "icon-size": 15,
@@ -65,7 +65,7 @@
     "network": {
 	"interval": 1,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "({signalStrength}%)    {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-wifi": "{bandwidthTotalBytes}  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -92,6 +92,24 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/menu": {
+    	"format": "",
+	"on-click": "rofi -show drun",
+
+    },
+    "custom/firefox": {
+	"format": "",
+	"on-click": "firefox"
+},
+    "custom/file": {
+	"format": "",
+	"on-click": "pcmanfm",
+},
+		
+    "custom/terminal": {
+	"format": "",
+	"on-click": "kitty"
+},
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",

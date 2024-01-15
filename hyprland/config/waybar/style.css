@@ -87,8 +87,12 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#custom-menu,
+#custom-file,
+#custom-firefox,
+#custom-terminal,
 #mpd {
-    padding: 0 5px;
+    padding: 0 4px;
     color: #ffffff;
 }
 
