@@ -22,6 +22,8 @@ nomacs #image viewer from aur
 pipewire
 pipewire-pulse
 pipewire-alsa
+bluez
+blueman
 pipewire-jack
 wireplumber
 kitty
