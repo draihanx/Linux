@@ -99,3 +99,5 @@ systemctl start bluetooth #To start immediately
 sudo rfkill
 sudo lspci | grep blue
 sudo bluetoothctl
+#to reduce video size
+ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
