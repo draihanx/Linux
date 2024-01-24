@@ -71,7 +71,7 @@ button:hover {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
 }
-
+#network,
 #clock,
 #battery,
 #cpu,
@@ -79,7 +79,6 @@ button:hover {
 #disk,
 #temperature,
 #backlight,
-#network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -91,14 +90,16 @@ button:hover {
 #custom-file,
 #custom-firefox,
 #custom-terminal,
+#custom-leafpad,
+#custom-stacer,
 #mpd {
     padding: 0 4px;
     color: #ffffff;
+    background: #454545;
+    border-radius: 8px;
 }
 
-#window,
 #workspaces {
-    margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

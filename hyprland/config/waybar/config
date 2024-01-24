@@ -3,11 +3,11 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 3, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-center": ["hyprland/workspaces"],
-    "modules-left": ["custom/menu","custom/firefox","custom/file","custom/terminal","hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "tray"],
+    "modules-left": ["custom/menu","custom/leafpad","custom/firefox","custom/file","custom/terminal","hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "temperature", "battery", "clock", "tray"],
     "tray": {
         // "icon-size": 15,
         "spacing": 5
@@ -21,11 +21,13 @@
 	"Max-length": 20
     },
     "cpu": {
+	"min-length": 6,
         "format": "{usage}% ",
 	"interval": 1,
         "tooltip": false
     },
     "memory": {
+	"min-length": 6,
         "format": "{}% ",
 	"interval": 1,
     },
@@ -63,6 +65,7 @@
         "bat": "BAT2"
     },
     "network": {
+	"min-length": 12,
 	"interval": 1,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{bandwidthTotalBytes}  ",
@@ -73,7 +76,9 @@
         //"format-alt": "{ifname}: {ipaddr}/{cidr}"
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio": {
+    "pulseaudio": {	
+	"min-length": 15,
+        "format": "{usage}% ",
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -92,24 +97,37 @@
         },
         "on-click": "pavucontrol"
     },
+
+    "custom/stacer": {
+    	"format": "",
+	"on-click": "stacer",
+
+    },
+
     "custom/menu": {
     	"format": "",
 	"on-click": "rofi -show drun",
 
     },
+
+    "custom/leafpad": {
+	"format": "",
+	"on-click": "leafpad"
+    },
+
     "custom/firefox": {
 	"format": "",
 	"on-click": "firefox"
-},
+    },
     "custom/file": {
 	"format": "",
 	"on-click": "pcmanfm",
-},
+    },
 		
     "custom/terminal": {
 	"format": "",
 	"on-click": "kitty"
-},
+    },
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -129,6 +147,8 @@
 		"active": "",
 		"urgent": "",
 	}
-    }
+    },
+    "hyprland/window": {
+	"max-length": 25,
+   }
 }
-
