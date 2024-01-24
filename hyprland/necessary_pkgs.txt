@@ -28,4 +28,5 @@ pipewire-jack
 wireplumber
 kitty
 ranger
+leafpad
 
