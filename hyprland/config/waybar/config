@@ -72,9 +72,9 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}"
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{bandwidthTotalBytes} {essid}"
     },
     "pulseaudio": {	
 	"min-length": 15,
