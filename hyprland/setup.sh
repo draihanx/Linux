@@ -1,4 +1,6 @@
-rm -rf $HOME/.config
+rm -rf $HOME/.config/waybar
+rm -rf $HOME/.config/kitty
+rm -rf $HOME/.config/hypr
 mkdir -p $HOME/.config
 mv config/* $HOME/.config/
 mv environment /etc/environment
