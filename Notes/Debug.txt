@@ -107,7 +107,7 @@ ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
 
 
 #bulk rename
-for f in *; do mv "$f" "{f:0:-4}";done
+for f in *; do mv "$f" "${f:0:-4}";done
 
 
 #ftp is not working in pcmanfm
