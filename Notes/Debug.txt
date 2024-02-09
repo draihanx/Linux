@@ -112,3 +112,6 @@ for f in *; do mv "$f" "${f:0:-4}";done
 
 #ftp is not working in pcmanfm
 sudo pacman -Sy gvfs
+
+#mkfs.vfat not found
+sudo pacman -Sy dosfstools
